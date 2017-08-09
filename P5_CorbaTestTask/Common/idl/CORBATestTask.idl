@@ -1,0 +1,22 @@
+module CORBATestTask
+{
+	struct TaskData
+	{
+		unsigned long id;
+		unsigned long integer1;
+		unsigned long integer2;
+		string	operation;
+		unsigned long results;
+	};
+	
+	
+	interface Compute
+	{
+		void computeUsingParameters (in unsigned long id, 
+									in unsigned long integer1,
+									in unsigned long integer2,
+									in string operation,
+									out TaskData resultsData); 
+		
+	};
+};

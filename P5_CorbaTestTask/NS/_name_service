@@ -1,0 +1,18 @@
+#name service
+
+NS_PORT="33333"
+
+NS_EXE="tao_cosnaming"
+NS_COMMAND="${NS_EXE} -ORBListenEndpoints iiop://:${NS_PORT}"
+
+
+isNSWorking()
+{
+	if [ -n "$(pidof ${NS_EXE})" ]
+	then
+		return 0
+	fi
+
+	return 1
+}
+
